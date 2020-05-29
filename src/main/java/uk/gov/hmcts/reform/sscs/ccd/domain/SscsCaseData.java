@@ -168,7 +168,7 @@ public class SscsCaseData implements CaseData {
     private String pipWriteFinalDecisionMovingAroundQuestion;
     private String pipWriteFinalDecisionReasonsForDecision;
     private String testShowCondition;
-    private String esaTestSection3;
+    private List<String> esaTestSection3;
 
     @JsonCreator
     public SscsCaseData(@JsonProperty(value = "ccdCaseId", access = JsonProperty.Access.WRITE_ONLY) String ccdCaseId,
@@ -309,7 +309,7 @@ public class SscsCaseData implements CaseData {
                         @JsonProperty("pipWriteFinalDecisionMovingAroundQuestion") String pipWriteFinalDecisionMovingAroundQuestion,
                         @JsonProperty("pipWriteFinalDecisionReasonsForDecision") String pipWriteFinalDecisionReasonsForDecision,
                         @JsonProperty("testShowCondition") String testShowCondition,
-                        @JsonProperty("esaTestSection3") String esaTestSection3
+                        @JsonProperty("esaTestSection3") List<String> esaTestSection3
     ) {
         this.ccdCaseId = ccdCaseId;
         this.state = state;
