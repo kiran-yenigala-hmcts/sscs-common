@@ -227,6 +227,7 @@ public class SscsCaseData implements CaseData {
     private String updateNotListableDueDate;
     private String updateNotListableWhereShouldCaseMoveTo;
     private String languagePreferenceWelsh;
+    private DynamicList dynamicBenefitType;
 
     @JsonCreator
     public SscsCaseData(@JsonProperty(value = "ccdCaseId", access = JsonProperty.Access.WRITE_ONLY) String ccdCaseId,
@@ -418,7 +419,8 @@ public class SscsCaseData implements CaseData {
                         @JsonProperty("updateNotListableSetNewDueDate") String updateNotListableSetNewDueDate,
                         @JsonProperty("updateNotListableDueDate") String updateNotListableDueDate,
                         @JsonProperty("updateNotListableWhereShouldCaseMoveTo") String updateNotListableWhereShouldCaseMoveTo,
-                        @JsonProperty("languagePreferenceWelsh") String languagePreferenceWelsh) {
+                        @JsonProperty("languagePreferenceWelsh") String languagePreferenceWelsh,
+                        @JsonProperty("dynamicBenefitType") DynamicList dynamicBenefitType) {
         this.ccdCaseId = ccdCaseId;
         this.state = state;
         this.caseReference = caseReference;
@@ -607,6 +609,7 @@ public class SscsCaseData implements CaseData {
         this.updateNotListableDueDate = updateNotListableDueDate;
         this.updateNotListableWhereShouldCaseMoveTo = updateNotListableWhereShouldCaseMoveTo;
         this.languagePreferenceWelsh = languagePreferenceWelsh;
+        this.dynamicBenefitType = dynamicBenefitType;
     }
 
     @JsonIgnore
